@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<body>
+    <form>
+        <input type="text" name="username" placeholder="Имя">
+        <br>
+        <input type="email" name="email" placeholder="Почта">
+        <br>
+        <textarea name="text" placeholder="комментарий"></textarea>
+        <br>
+        <input type="submit">
+
+        {% for book in posts %}
+        <div class="message">
+            <span class="username">{{book.username }}</span>
+            <span class="email">{{ book.email }}</span>
+            <span class="comment">{{ book.comment }}</span>
+        </div>
+        {% endfor %}
+
+    </form>
+</body>
