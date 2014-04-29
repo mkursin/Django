@@ -41,10 +41,18 @@ INSTALLED_APPS = (
     'debug_toolbar',
 
 )
+
+# TEMPLATE_LOADERS = (
+#     'django.template.loaders.filesystem.Loader',
+#     'django.template.loaders.app_directories.Loader',
+# )
+
+
 TEMPLATE_DIRS = (
-    'D:\Works/Django/DjangoSite/templates/'
+    'D:/Works/Django/DjangoSite/templates/'
 
 )
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

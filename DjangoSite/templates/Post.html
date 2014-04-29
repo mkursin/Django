@@ -1,0 +1,10 @@
+<ul>
+    {% for poll in entry %}
+        <li> {{ poll.id }} </li>
+        <li> {{ poll.username }} </li>
+        <li> {{ poll.email }} </li>
+        <li> {{ poll.comment }} </li>
+        <li> {{ poll.date }} </li>
+        <li> _________________</li>
+    {% endfor %}
+</ul>
