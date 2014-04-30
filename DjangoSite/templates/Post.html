@@ -1,10 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+        <title>Список комментариев</title>
+</head>
+<body>
+
+<h1>Добавленные комментарии </h1>
+
+<h1>Thank you! Your comment is added!</h1>
+
 <ul>
-    {% for poll in entry %}
-        <li> {{ poll.id }} </li>
-        <li> {{ poll.username }} </li>
-        <li> {{ poll.email }} </li>
-        <li> {{ poll.comment }} </li>
-        <li> {{ poll.date }} </li>
+    {% for list_comment in list_comments %}
+        <li> №: {{ list_comment.id }} </li>
+        <li> Имя: {{ list_comment.username }} </li>
+        <li> email: {{ list_comment.email }} </li>
+        <li> Комментарий: {{ list_comment.comment }} </li>
+        <li>дата комментирования: {{ list_comment.date }} </li>
         <li> _________________</li>
     {% endfor %}
 </ul>
+<a href="Index.html">Перейти назад</a>
+</body>
+</html>

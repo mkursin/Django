@@ -2,15 +2,13 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Гостевая книга</title>
+{#    <title>Гостевая книга</title>#}
 </head>
 <body>
-{#<h1>Гостевая книга на фреймворке Django </h1>#}
-{##}
-{#<h2> Напишите свой комментарий </h2>#}
+<h1>Гостевая книга на фреймворке Django </h1>
+<h2> Напишите свой комментарий </h2>
 
 <form  method="get">
-    <table>{{ form }}</table>
     <input type="text" name="username" placeholder="Имя" size="28" required="*" autofocus="">
     <br>
     <input type="email" name="email" placeholder="Почта" size="28" required="*">
@@ -22,17 +20,18 @@
         <button type="reset">Очистить</button>
         <button type="submit">сохранить</button>
     </p>
-    <ul>
-     {% for poll in entry %}
-        <li> {{ poll.id }} </li>
-        <li> {{ poll.username }} </li>
-        <li> {{ poll.email }} </li>
-        <li> {{ poll.comment }} </li>
-        <li> {{ poll.date }} </li>
+
+</form>
+<ul>
+     {% for list_comment in list_comments %}
+        <li> number comment: {{ list_comment.id }} </li>
+        <li> name: {{ list_comment.username }} </li>
+        <li> email: {{ list_comment.email }} </li>
+        <li> comment: {{ list_comment.comment }} </li>
+        <li>date comment:  {{ list_comment.date }} </li>
         <li> _________________</li>
     {% endfor %}
 </ul>
-</form>
 
-{#</body>#}
-{#</html>#}
+</body>
+</html>
