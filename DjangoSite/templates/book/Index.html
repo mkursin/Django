@@ -5,11 +5,11 @@
 {#    <title>Гостевая книга</title>#}
 </head>
 <body>
-<h1>Гостевая книга на фреймворке Django </h1>
-<h2> Напишите свой комментарий </h2>
+{#<h1>Гостевая книга на фреймворке Django </h1>#}
+{#<h2> Напишите свой комментарий </h2>#}
 
 <form  method="get">
-    <input type="text" name="username" placeholder="Имя" size="28" required="*" autofocus="">
+    <input type="text" name="username" placeholder="Имя" size="28" required="*" autofocus="" >
     <br>
     <input type="email" name="email" placeholder="Почта" size="28" required="*">
     <br>
@@ -22,9 +22,9 @@
     </p>
 
 </form>
+
 <ul>
      {% for list_comment in list_comments %}
-        <li> number comment: {{ list_comment.id }} </li>
         <li> name: {{ list_comment.username }} </li>
         <li> email: {{ list_comment.email }} </li>
         <li> comment: {{ list_comment.comment }} </li>

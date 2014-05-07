@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -38,14 +39,25 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'DjangoSite',
     'guest_book',
+    'blog',
+    'django_nose',
     'debug_toolbar',
 
 )
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
-
+# NOSE_ARGS = [
+#     '--with-coverage',
+#     # '--cover-package=user',
+#     # '--with-progressive',
+#     '--verbosity=0',
+#     '--with-fixture-bundling',
+# ]
 
 TEMPLATE_DIRS = (
-    'D:/Works/Django/DjangoSite/templates/'
+    'D:/Works/Django/DjangoSite/templates/',
+    'D:/Works/Django/DjangoSite/templates/blog',
+    'D:/Works/Django/DjangoSite/templates/book',
 
 )
 
@@ -75,8 +87,11 @@ DATABASES = {
         'NAME': 'django_site',
         'ENGINE': 'django.db.backends.mysql',
         'USER': 'root',
-        'PASSWORD': ''
-    },
+        'PASSWORD': '',
+        'TEST_CHARSET': "utf8",
+        'TEST_NAME': 'test_site',
+        'TEST_ENIGNE': 'sqlite3',
+    }
 }
 
 # Internationalization
